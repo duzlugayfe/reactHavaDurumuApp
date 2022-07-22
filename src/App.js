@@ -6,13 +6,13 @@ import Arama from "./Bilesenler/Arama/AramaCubugu";
 import Sonuc from "./Bilesenler/Sonuc";
 
 function App() {
-  const [havaDurumu, belirtHavaDurumu] = useState({});
+  const [havaDurumu, setHavaDurumu] = useState({});
 
   return (
     <section className="uygulama">
       <Arkaplan arkaplan={havaDurumu.weather && havaDurumu.weather[0].main} />
       <div id="baslik">Hava Durumu</div>
-      <Arama belirtHavaDurumu={belirtHavaDurumu} />
+      <Arama setHavaDurumu={setHavaDurumu} />
       <Sonuc hava={havaDurumu} />
     </section>
   );
